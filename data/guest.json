@@ -1,0 +1,113 @@
+[
+    {
+      "id": 1,
+      "name": "John",
+      "lastname": "Smith",
+      "order_date": "01-Oct-2023",
+      "checkin": "01-Dec-2023",
+      "checkout": "18-Dec-2023",
+      "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "room_type": "Single Bed",
+      "status": "Check In"
+    },
+    {
+      "id": 2,
+      "name": "Jane",
+      "lastname": "Johnson",
+      "order_date": "02-Oct-2023",
+      "checkin": "09-Dec-2023",
+      "checkout": "19-Dec-2023",
+      "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "room_type": "Double Bed",
+      "status": "Check Out"
+    },
+    {
+      "id": 3,
+      "name": "Michael",
+      "lastname": "Williams",
+      "order_date": "03-Oct-2023",
+      "checkin": "06-Dec-2023",
+      "checkout": "21-Dec-2023",
+      "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "room_type": "Superior Bed",
+      "status": "In Progress"
+    },
+    {
+      "id": 4,
+      "name": "Emily",
+      "lastname": "Jones",
+      "order_date": "04-Oct-2023",
+      "checkin": "12-Dec-2023",
+      "checkout": "22-Dec-2023",
+      "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "room_type": "Suite",
+      "status": "Check In"
+    },
+    {
+      "id": 5,
+      "name": "David",
+      "lastname": "Brown",
+      "order_date": "05-Oct-2023",
+      "checkin": "03-Dec-2023",
+      "checkout": "20-Dec-2023",
+      "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "room_type": "Double Bed",
+      "status": "Check Out"
+    },
+    {
+      "id": 6,
+      "name": "Sarah",
+      "lastname": "Davis",
+      "order_date": "06-Oct-2023",
+      "checkin": "08-Dec-2023",
+      "checkout": "17-Dec-2023",
+      "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "room_type": "Single Bed",
+      "status": "In Progress"
+    },
+    {
+      "id": 7,
+      "name": "Christopher",
+      "lastname": "Miller",
+      "order_date": "07-Oct-2023",
+      "checkin": "14-Dec-2023",
+      "checkout": "23-Dec-2023",
+      "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "room_type": "Suite",
+      "status": "Check In"
+    },
+    {
+      "id": 8,
+      "name": "Olivia",
+      "lastname": "Wilson",
+      "order_date": "08-Oct-2023",
+      "checkin": "05-Dec-2023",
+      "checkout": "24-Dec-2023",
+      "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "room_type": "Superior Bed",
+      "status": "Check Out"
+    },
+    {
+      "id": 9,
+      "name": "Daniel",
+      "lastname": "Moore",
+      "order_date": "09-Oct-2023",
+      "checkin": "11-Dec-2023",
+      "checkout": "19-Dec-2023",
+      "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "room_type": "Single Bed",
+      "status": "In Progress"
+    },
+    {
+      "id": 10,
+      "name": "Emma",
+      "lastname": "Taylor",
+      "order_date": "10-Oct-2023",
+      "checkin": "07-Dec-2023",
+      "checkout": "20-Dec-2023",
+      "notes": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "room_type": "Double Bed",
+      "status": "Check In"
+    }
+  ]
+  

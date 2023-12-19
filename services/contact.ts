@@ -6,7 +6,6 @@ export const fetchAllComments = (): ContactInterface[] => {
 }
 
 export const fetchCommentbyId = (id:string): ContactInterface | undefined =>{
-    id= id.replace(/:/g, '');
     const comment = commentsData.find((comment: ContactInterface) => comment.id === id);
     return comment
 }

@@ -6,8 +6,6 @@ export const fetchAllUsers = (): UserInterface[] => {
 }
 
 export const fetchUserById = (id: string): UserInterface | undefined => {
-    
-    id= id.replace(/:/g, '');
     const parsedId: number = parseInt(id);
     const user = usersData.find((user: UserInterface) => user.id === parsedId);
 

@@ -1,5 +1,4 @@
 require('ts-node/register')
-import express from 'express'
 import {app} from './app'
 
 

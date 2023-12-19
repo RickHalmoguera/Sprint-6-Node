@@ -1,0 +1,363 @@
+[
+    {
+      "id": 5,
+      "photos": [
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff"
+      ],
+      "room_type": "Single Bed",
+      "room_number": 5,
+      "description": "Lorem ipsum dolor sit amet.",
+      "offer": true,
+      "price": 100,
+      "discount": 20,
+      "cancellation": "Lorem ipsum dolor sit amet.",
+      "ameneties": [
+        "Air conditioner",
+        "Breakfast",
+        "Cleaning",
+        "Grocery"
+      ]
+    },
+    {
+      "id": 6,
+      "photos": [
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff"
+      ],
+      "room_type": "Double Bed",
+      "room_number": 6,
+      "description": "Lorem ipsum dolor sit amet.",
+      "offer": false,
+      "price": 200,
+      "discount": 30,
+      "cancellation": "Lorem ipsum dolor sit amet.",
+      "ameneties": [
+        "Air conditioner",
+        "Breakfast",
+        "Cleaning",
+        "Grocery",
+        "Shop Near"
+      ]
+    },
+    {
+      "id": 7,
+      "photos": [
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff"
+      ],
+      "room_type": "Superior Double",
+      "room_number": 7,
+      "description": "Lorem ipsum dolor sit amet.",
+      "offer": true,
+      "price": 300,
+      "discount": 10,
+      "cancellation": "Lorem ipsum dolor sit amet.",
+      "ameneties": [
+        "Air conditioner",
+        "Breakfast",
+        "Cleaning",
+        "Grocery",
+        "Shop Near",
+        "24/7 Online Support"
+      ]
+    },
+    {
+      "id": 8,
+      "photos": [
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff"
+      ],
+      "room_type": "Suite",
+      "room_number": 8,
+      "description": "Lorem ipsum dolor sit amet.",
+      "offer": false,
+      "price": 400,
+      "discount": 20,
+      "cancellation": "Lorem ipsum dolor sit amet.",
+      "ameneties": [
+        "Air conditioner",
+        "Breakfast",
+        "Cleaning",
+        "Grocery",
+        "Shop Near",
+        "24/7 Online Support",
+        "Smart Security"
+      ]
+    },
+    {
+      "id": 9,
+      "photos": [
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff"
+      ],
+      "room_type": "Single Bed",
+      "room_number": 9,
+      "description": "Lorem ipsum dolor sit amet.",
+      "offer": true,
+      "price": 100,
+      "discount": 30,
+      "cancellation": "Lorem ipsum dolor sit amet.",
+      "ameneties": [
+        "Air conditioner",
+        "Breakfast",
+        "Cleaning",
+        "Grocery"
+      ]
+    },
+    {
+      "id": 10,
+      "photos": [
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff"
+      ],
+      "room_type": "Double Bed",
+      "room_number": 10,
+      "description": "Lorem ipsum dolor sit amet.",
+      "offer": false,
+      "price": 200,
+      "discount": 10,
+      "cancellation": "Lorem ipsum dolor sit amet.",
+      "ameneties": [
+        "Air conditioner",
+        "Breakfast",
+        "Cleaning",
+        "Grocery",
+        "Shop Near"
+      ]
+    },
+    {
+      "id": 11,
+      "photos": [
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff"
+      ],
+      "room_type": "Superior Double",
+      "room_number": 11,
+      "description": "Lorem ipsum dolor sit amet.",
+      "offer": true,
+      "price": 300,
+      "discount": 20,
+      "cancellation": "Lorem ipsum dolor sit amet.",
+      "ameneties": [
+        "Air conditioner",
+        "Breakfast",
+        "Cleaning",
+        "Grocery",
+        "Shop Near",
+        "24/7 Online Support"
+      ]
+    },
+    {
+      "id": 12,
+      "photos": [
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff"
+      ],
+      "room_type": "Suite",
+      "room_number": 12,
+      "description": "Lorem ipsum dolor sit amet.",
+      "offer": false,
+      "price": 400,
+      "discount": 30,
+      "cancellation": "Lorem ipsum dolor sit amet.",
+      "ameneties": [
+        "Air conditioner",
+        "Breakfast",
+        "Cleaning",
+        "Grocery",
+        "Shop Near",
+        "24/7 Online Support",
+        "Smart Security"
+      ]
+    },
+    {
+      "id": 13,
+      "photos": [
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff"
+      ],
+      "room_type": "Single Bed",
+      "room_number": 13,
+      "description": "Lorem ipsum dolor sit amet.",
+      "offer": true,
+      "price": 100,
+      "discount": 10,
+      "cancellation": "Lorem ipsum dolor sit amet.",
+      "ameneties": [
+        "Air conditioner",
+        "Breakfast",
+        "Cleaning",
+        "Grocery"
+      ]
+    },
+    {
+      "id": 14,
+      "photos": [
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff"
+      ],
+      "room_type": "Double Bed",
+      "room_number": 14,
+      "description": "Lorem ipsum dolor sit amet.",
+      "offer": false,
+      "price": 200,
+      "discount": 20,
+      "cancellation": "Lorem ipsum dolor sit amet.",
+      "ameneties": [
+        "Air conditioner",
+        "Breakfast",
+        "Cleaning",
+        "Grocery",
+        "Shop Near"
+      ]
+    },
+    {
+      "id": 15,
+      "photos": [
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff"
+      ],
+      "room_type": "Superior Double",
+      "room_number": 15,
+      "description": "Lorem ipsum dolor sit amet.",
+      "offer": true,
+      "price": 300,
+      "discount": 30,
+      "cancellation": "Lorem ipsum dolor sit amet.",
+      "ameneties": [
+        "Air conditioner",
+        "Breakfast",
+        "Cleaning",
+        "Grocery",
+        "Shop Near",
+        "24/7 Online Support"
+      ]
+    },
+    {
+      "id": 16,
+      "photos": [
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff"
+      ],
+      "room_type": "Suite",
+      "room_number": 16,
+      "description": "Lorem ipsum dolor sit amet.",
+      "offer": false,
+      "price": 400,
+      "discount": 10,
+      "cancellation": "Lorem ipsum dolor sit amet.",
+      "ameneties": [
+        "Air conditioner",
+        "Breakfast",
+        "Cleaning",
+        "Grocery",
+        "Shop Near",
+        "24/7 Online Support",
+        "Smart Security"
+      ]
+    },
+    {
+      "id": 17,
+      "photos": [
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff"
+      ],
+      "room_type": "Single Bed",
+      "room_number": 17,
+      "description": "Lorem ipsum dolor sit amet.",
+      "offer": true,
+      "price": 100,
+      "discount": 20,
+      "cancellation": "Lorem ipsum dolor sit amet.",
+      "ameneties": [
+        "Air conditioner",
+        "Breakfast",
+        "Cleaning",
+        "Grocery"
+      ]
+    },
+    {
+      "id": 18,
+      "photos": [
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff"
+      ],
+      "room_type": "Double Bed",
+      "room_number": 18,
+      "description": "Lorem ipsum dolor sit amet.",
+      "offer": false,
+      "price": 200,
+      "discount": 30,
+      "cancellation": "Lorem ipsum dolor sit amet.",
+      "ameneties": [
+        "Air conditioner",
+        "Breakfast",
+        "Cleaning",
+        "Grocery",
+        "Shop Near"
+      ]
+    },
+    {
+      "id": 19,
+      "photos": [
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff"
+      ],
+      "room_type": "Superior Double",
+      "room_number": 19,
+      "description": "Lorem ipsum dolor sit amet.",
+      "offer": true,
+      "price": 300,
+      "discount": 10,
+      "cancellation": "Lorem ipsum dolor sit amet.",
+      "ameneties": [
+        "Air conditioner",
+        "Breakfast",
+        "Cleaning",
+        "Grocery",
+        "Shop Near",
+        "24/7 Online Support"
+      ]
+    },
+    {
+      "id": 20,
+      "photos": [
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff",
+        "http://dummyimage.com/255x255.png/ff4444/ffffff"
+      ],
+      "room_type": "Suite",
+      "room_number": 20,
+      "description": "Lorem ipsum dolor sit amet.",
+      "offer": false,
+      "price": 400,
+      "discount": 20,
+      "cancellation": "Lorem ipsum dolor sit amet.",
+      "ameneties": [
+        "Air conditioner",
+        "Breakfast",
+        "Cleaning",
+        "Grocery",
+        "Shop Near",
+        "24/7 Online Support",
+        "Smart Security"
+      ]
+    }
+  ]
+  
