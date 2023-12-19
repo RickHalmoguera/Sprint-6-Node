@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express'
-import {userData} from '../data/users'
+import userData from '../data/users.json'
 import { UserInterface } from '../models/User'
 export const userRouter = express.Router()
 
@@ -9,7 +9,7 @@ userRouter.get('/', (req: Request, res: Response) => {
 
 userRouter.get('/:id', (req: Request, res: Response) => {
     let id: string = req.params.id;
-    id = id.replace(/[^0-9]/g, '');
+    id= id.replace(/:/g, '');
     const parsedId: number = parseInt(id);
     const user = userData.find((user: UserInterface) => user.id === parsedId);
 

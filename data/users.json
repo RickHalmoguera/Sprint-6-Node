@@ -1,4 +1,4 @@
-export const userData=
+
 [{"photo":"http://dummyimage.com/88x88.png/ff4444/ffffff","id":1,"name":"Carolee Hindsberg","email":"chindsberg0@mozilla.org","start_date":"24-Aug-2023","description":"iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget","phone":"520-302-6903","is_active":false},
 {"photo":"http://dummyimage.com/88x88.png/5fa2dd/ffffff","id":2,"name":"Baxie Rewan","email":"brewan1@hibu.com","start_date":"31-Jan-2023","description":"quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse","phone":"621-605-4521","is_active":false},
 {"photo":"http://dummyimage.com/88x88.png/ff4444/ffffff","id":3,"name":"Donetta Gilliard","email":"dgilliard2@globo.com","start_date":"20-Dec-2022","description":"porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris","phone":"938-788-9811","is_active":true},
