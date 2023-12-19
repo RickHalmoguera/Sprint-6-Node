@@ -1,18 +1,15 @@
 import express, { Request, Response } from 'express'
-import userData from '../data/users.json'
+import { fetchAllUsers, fetchUserById } from '../services/user';
 import { UserInterface } from '../models/User'
 export const userRouter = express.Router()
 
 userRouter.get('/', (req: Request, res: Response) => {
-    res.send(userData)
+    const allUsers: UserInterface[] = fetchAllUsers();
+    res.send(allUsers)
 })
 
 userRouter.get('/:id', (req: Request, res: Response) => {
-    let id: string = req.params.id;
-    id= id.replace(/:/g, '');
-    const parsedId: number = parseInt(id);
-    const user = userData.find((user: UserInterface) => user.id === parsedId);
-
+    const user: UserInterface | undefined = fetchUserById(req.params.id);
     if (user) {
         res.json(user);
     } else {

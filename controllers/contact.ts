@@ -1,17 +1,16 @@
 import express, { Request, Response } from 'express'
 import commnetsData from '../data/comments.json'
 import { ContactInterface } from '../models/Contact'
+import { fetchAllComments, fetchCommentbyId } from '../services/contact'
 export const contactRouter = express.Router()
 
 contactRouter.get('/', (req: Request, res: Response) => {
-    res.send(commnetsData)
+    const allComments : ContactInterface[] =fetchAllComments()
+    res.send(allComments)
 })
 
 contactRouter.get('/:id', (req: Request, res: Response) => {
-    let id: string = req.params.id;
-    id= id.replace(/:/g, '');
-    const comment = commnetsData.find((comment: ContactInterface) => comment.id === id);
-    console.log(id)
+    const comment: ContactInterface | undefined = fetchCommentbyId(req.params.id);
     if (comment) {
         res.json(comment);
     } else {
