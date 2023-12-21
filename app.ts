@@ -16,8 +16,9 @@ app.use('/login', loginRouter)
 
 app.use(authMiddleware)
 
-app.use('/users', userRouter)
-app.use('/users/:id', userRouter)
+
+app.use('/user', userRouter)
+app.use('/user/:id', userRouter)
 
 app.use('/contact', contactRouter)
 app.use('/contact/:id', contactRouter)
@@ -25,7 +26,7 @@ app.use('/contact/:id', contactRouter)
 app.use('/booking', bookingRouter)
 app.use('/booking/:id', bookingRouter)
 
-app.use('/rooms', roomsRouter)
-app.use('/rooms/:id', roomsRouter)
+app.use('/room', roomsRouter)
+app.use('/room/:id', roomsRouter)
 
 export default app;

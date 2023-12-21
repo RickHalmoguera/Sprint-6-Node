@@ -5,7 +5,7 @@ export const userRouter = express.Router()
 
 userRouter.get('/', (req: Request, res: Response) => {
     const allUsers: UserInterface[] = fetchAllUsers();
-    res.send(allUsers)
+    res.json(allUsers)
 })
 
 userRouter.get('/:id', (req: Request, res: Response) => {

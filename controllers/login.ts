@@ -14,7 +14,9 @@ loginRouter.post('/', (req: Request, res: Response) => {
     const { email, password } = req.body
 
     if (email === 'test@test.com' && password === 'test') {
-        const token = jwt.sign(JSON.stringify({ id: 1, email: 'test@test.com' }), JWT_SECRET)
+        const token = jwt.sign({ id: 1, email: 'test@test.com' }, JWT_SECRET, { algorithm: 'HS256' });
+
+        
         return res.json({ token })
     }
 
