@@ -3,18 +3,29 @@ import { userRouter } from './controllers/user'
 import { contactRouter } from './controllers/contact'
 import { bookingRouter } from './controllers/booking'
 import { roomsRouter } from './controllers/room'
+import { authMiddleware } from './middleware/auth'
+import { loginRouter } from './controllers/login'
+
+require('dotenv').config()
 
 export const app = express()
+app.use(express.json())
 
-app.use('/users',  userRouter)
-app.use('/users/:id',  userRouter)
 
-app.use('/contact',  contactRouter)
-app.use('/contact/:id',  contactRouter)
+app.use('/login', loginRouter)
 
-app.use('/booking',  bookingRouter)
-app.use('/booking/:id',  bookingRouter)
+app.use(authMiddleware)
 
-app.use('/rooms',  roomsRouter)
-app.use('/rooms/:id',  roomsRouter)
+app.use('/users', userRouter)
+app.use('/users/:id', userRouter)
 
+app.use('/contact', contactRouter)
+app.use('/contact/:id', contactRouter)
+
+app.use('/booking', bookingRouter)
+app.use('/booking/:id', bookingRouter)
+
+app.use('/rooms', roomsRouter)
+app.use('/rooms/:id', roomsRouter)
+
+export default app;
