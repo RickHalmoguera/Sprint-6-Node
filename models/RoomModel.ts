@@ -1,4 +1,4 @@
-import mongoose, {Document, Schema } from "mongoose";
+import mongoose, {Schema } from "mongoose";
 
 export interface RoomModel {
   photos: string[];
@@ -14,7 +14,7 @@ export interface RoomModel {
 }
 
 
-const bookingSchema = new Schema({
+const RoomSchema = new Schema({
   photos: {type: Array, required: true},
   roomType: {type: String, required: true},
   roomNumber: {type: String, required: true},
@@ -27,4 +27,4 @@ const bookingSchema = new Schema({
   status: {type: String, required: true},
 })
 
-export const Room = mongoose.model<RoomModel>("Rooms", bookingSchema, "rooms");
+export const Room = mongoose.model<RoomModel>("Rooms", RoomSchema);

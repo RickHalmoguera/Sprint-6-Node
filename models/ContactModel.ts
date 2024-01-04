@@ -1,4 +1,4 @@
-import mongoose, {Document, Schema } from "mongoose";
+import mongoose, {Schema } from "mongoose";
 
 export interface ContactModel {
   userImg: string;
@@ -27,4 +27,4 @@ const contactSchema = new Schema({
   is_archived: {type: Boolean},
 })
 
-export const Contact = mongoose.model<ContactModel>("Contact", contactSchema, "contacts");
+export const Contact = mongoose.model<ContactModel>("contacts", contactSchema);

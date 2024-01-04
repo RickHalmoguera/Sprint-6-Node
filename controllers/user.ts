@@ -1,34 +1,47 @@
-import express, { Request, Response } from 'express'
-import { fetchAllUsers, fetchUserById } from '../services/user';
-import { UserInterface } from '../models/UserModel'
-export const userRouter = express.Router()
+import express, {Request, Response} from "express";
+import { deleteUser, getUsers, getUsersId, patchUser, postUser } from "../services/user";
 
-userRouter.get('/', (req: Request, res: Response) => {
-    const allUsers: UserInterface[] = fetchAllUsers();
-    res.json(allUsers)
-})
+export const usersRouter = express.Router();
 
-userRouter.get('/:id', (req: Request, res: Response) => {
-    const user: UserInterface | undefined = fetchUserById(req.params.id);
-    if (user) {
-        res.json(user);
-    } else {
-        res.status(404).send('User not found');
+usersRouter.get("/", async (req: Request, res: Response) => {
+    const users = await getUsers()
+    res.json(users);
+});
+
+usersRouter.get("/:id", async (req: Request, res: Response) => {
+    const id = req.params.id
+    const users = await getUsersId(id)
+    
+    if (users) {
+        res.json(users);
+      } else {
+        res.status(404).json({"message": "User not found"});
+      }
+});
+
+usersRouter.post("/", async (req: Request, res: Response) => {
+    const users = await postUser(req.body)
+    res.json( [{success: "users create successfully"}]);
+});
+
+
+usersRouter.patch("/:id", async (req: Request, res: Response) => {
+    const id = req.params.id
+    const data = await patchUser(id, req.body)
+    if (data) {
+        res.json( [{success: "users updated successfully"}]);
+      } else {
+        res.status(404).json({"message": "User not found"});
     }
 });
 
-userRouter.post('/new', (req: Request, res: Response)=>{
-    res.send({success: true})
-})
 
-userRouter.put('/:id', (req: Request, res: Response)=>{
-    res.send({success: true})
-})
-
-userRouter.patch('/:id', (req: Request, res: Response)=>{
-    res.send({success: true})
-})
-
-userRouter.delete('/:id', (req: Request, res: Response)=>{
-    res.send({success: true})
-})
+usersRouter.delete("/:id", async (req: Request, res: Response) => {
+    const id = req.params.id;
+    const data = await deleteUser(id)
+    if (data) {
+        res.json( [{success: "users deleted successfully"}]);
+      } else {
+        res.status(404).json({"message": "User not found"});
+    }
+});

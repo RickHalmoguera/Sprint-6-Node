@@ -1,13 +1,26 @@
-import usersData from '../data/users.json'
-import { UserInterface } from '../models/UserModel';
+import { Document } from "mongoose"
+import { User, UserModel } from "../models/UserModel"
 
-export const fetchAllUsers = (): UserInterface[] => {
-    return usersData;
+
+export const getUsers = async() :Promise<UserModel[]> => {
+    return await User.find()
+}
+    
+export const getUsersId = async(id: string) :Promise<Document<UserModel> | null> => {
+    return await User.findById(id)
 }
 
-export const fetchUserById = (id: string): UserInterface | undefined => {
-    const parsedId: number = parseInt(id);
-    const user = usersData.find((user: UserInterface) => user.id === parsedId);
+export const postUser = async(userData: UserModel): Promise<Document<UserModel>>  => {
+    const user = new User(userData)
+    const document: Document<UserModel> = (await user.save()) as any
+    return document
 
-    return user
+}
+export const patchUser = async(id: string, userData: any): Promise<Document<UserModel> | null> => {
+    console.log(id)
+    return await User.findByIdAndUpdate(id, userData, { new: true, runValidators: true })
+}
+
+export const deleteUser = async(id:string): Promise<Document<UserModel> | null>  => {
+    return await User.findByIdAndDelete(id).lean()
 }

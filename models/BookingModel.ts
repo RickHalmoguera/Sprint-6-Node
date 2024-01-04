@@ -1,6 +1,5 @@
-import { Room, RoomModel } from "./RoomModel";
-import mongoose, {Schema } from "mongoose";
-
+import { Room,RoomModel } from "./RoomModel";
+import mongoose, { Schema } from "mongoose";
 
 export interface BookingModel {
   name: string;
@@ -11,7 +10,6 @@ export interface BookingModel {
   specialRequest: string;
   status: string;
 }
-
 
 
 const bookingSchema = new Schema({
@@ -29,4 +27,4 @@ const bookingSchema = new Schema({
   status: {type: String, required: true},
 })
 
-export const Booking = mongoose.model<BookingModel>("Booking", bookingSchema, "bookings");
+export const Booking = mongoose.model<BookingModel>("Booking", bookingSchema);

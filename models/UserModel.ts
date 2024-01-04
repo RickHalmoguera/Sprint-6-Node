@@ -1,4 +1,4 @@
-import mongoose, {Document, Schema } from "mongoose";
+import mongoose, {Schema } from "mongoose";
 
 export interface UserModel {
   photo: string;
@@ -24,4 +24,4 @@ const userSchema = new Schema({
   password: {type: String, required: true},
 })
 
-export const User = mongoose.model<UserModel>("User", userSchema, "users");
+export const User = mongoose.model<UserModel>("users", userSchema);

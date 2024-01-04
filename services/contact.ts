@@ -1,11 +1,25 @@
-import commentsData from '../data/comments.json'
-import { ContactInterface } from '../models/ContactModel'
+import { Document } from "mongoose"
+import { ContactModel,Contact } from "../models/ContactModel"
 
-export const fetchAllComments = (): ContactInterface[] => {
-    return commentsData;
+
+export const getContacts = async() :Promise<ContactModel[]> => {
+    return await Contact.find()
+}
+    
+export const getContactsId = async(id: string) :Promise<Document<ContactModel> | null> => {
+    return await Contact.findById(id)
 }
 
-export const fetchCommentbyId = (id:string): ContactInterface | undefined =>{
-    const comment = commentsData.find((comment: ContactInterface) => comment.id === id);
-    return comment
+export const postContact = async(contactData: ContactModel): Promise<Document<ContactModel>>  => {
+    const contact = new Contact(contactData)
+    const document: Document<ContactModel> = (await contact.save()) as any
+    return document
+
+}
+export const patchContact = async(id: string, contactData: any): Promise<Document<ContactModel> | null> => {
+    return await Contact.findByIdAndUpdate(id, contactData, { new: true, runValidators: true })
+}
+
+export const deleteContact = async(id:string): Promise<ContactModel>  => {
+    return await Contact.findByIdAndDelete(id).lean()
 }
