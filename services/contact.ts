@@ -1,5 +1,5 @@
 import commentsData from '../data/comments.json'
-import { ContactInterface } from '../models/Contact'
+import { ContactInterface } from '../models/ContactModel'
 
 export const fetchAllComments = (): ContactInterface[] => {
     return commentsData;

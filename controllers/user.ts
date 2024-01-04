@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express'
 import { fetchAllUsers, fetchUserById } from '../services/user';
-import { UserInterface } from '../models/User'
+import { UserInterface } from '../models/UserModel'
 export const userRouter = express.Router()
 
 userRouter.get('/', (req: Request, res: Response) => {

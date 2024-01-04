@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express'
 import { fetchAllBookings, fetchBookingById } from '../services/booking'
-import { BookingInterface } from '../models/Booking'
+import { BookingInterface } from '../models/BookingModel'
 export const bookingRouter = express.Router()
 
 bookingRouter.get('/', (req: Request, res: Response) => {

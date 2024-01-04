@@ -1,5 +1,5 @@
 import bookingsData from '../data/guest.json'
-import { BookingInterface } from '../models/Booking'
+import { BookingInterface } from '../models/BookingModel'
 
 export const fetchAllBookings = (): BookingInterface[] => {
     return bookingsData;

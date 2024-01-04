@@ -1,5 +1,5 @@
 import usersData from '../data/users.json'
-import { UserInterface } from '../models/User';
+import { UserInterface } from '../models/UserModel';
 
 export const fetchAllUsers = (): UserInterface[] => {
     return usersData;

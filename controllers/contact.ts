@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express'
 import commnetsData from '../data/comments.json'
-import { ContactInterface } from '../models/Contact'
+import { ContactInterface } from '../models/ContactModel'
 import { fetchAllComments, fetchCommentbyId } from '../services/contact'
 export const contactRouter = express.Router()
 
