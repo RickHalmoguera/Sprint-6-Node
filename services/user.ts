@@ -2,7 +2,9 @@ import { Document } from "mongoose"
 import { User, UserModel } from "../models/UserModel"
 
 
+
 export const getUsers = async() :Promise<UserModel[]> => {
+   
     return await User.find()
 }
     
