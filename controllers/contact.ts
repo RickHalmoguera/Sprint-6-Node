@@ -38,6 +38,10 @@ contactRouter.patch("/:id", async (req: Request, res: Response) => {
 
 contactRouter.delete("/:id", async (req: Request, res: Response) => {
     const id = req.params.id;
-    await deleteContact(id)
-    
+    const data = await deleteContact(id)
+    if (data) {
+        res.json( [{success: "contact deleted successfully"}]);
+      } else {
+        res.status(404).json({"message": "Contact not found"});
+    }
 });

@@ -38,7 +38,10 @@ usersRouter.patch("/:id", async (req: Request, res: Response) => {
 
 usersRouter.delete("/:id", async (req: Request, res: Response) => {
     const id = req.params.id;
-    await deleteUser(id)
-    
+    const data = await deleteUser(id)
+    if (data) {
+        res.json( [{success: "users deleted successfully"}]);
+      } else {
+        res.status(404).json({"message": "User not found"});
     }
 });
