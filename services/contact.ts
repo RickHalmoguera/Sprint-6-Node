@@ -17,7 +17,7 @@ export const postContact = async(contactData: ContactModel): Promise<Document<Co
 
 }
 export const patchContact = async(id: string, contactData: any): Promise<Document<ContactModel> | null> => {
-    return await Contact.findByIdAndUpdate(id, contactData, { new: true, runValidators: true })
+    return await Contact.findByIdAndUpdate(id, contactData)
 }
 
 export const deleteContact = async(id:string): Promise<ContactModel>  => {

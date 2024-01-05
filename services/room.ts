@@ -17,7 +17,7 @@ export const postRoom = async(roomData: RoomModel): Promise<Document<RoomModel>>
 
 }
 export const patchRoom = async(id: string, roomData: any): Promise<Document<RoomModel> | null> => {
-    return await Room.findByIdAndUpdate(id, roomData, { new: true, runValidators: true })
+    return await Room.findByIdAndUpdate(id, roomData)
 }
 
 export const deleteRoom = async(id:string): Promise<RoomModel>  => {

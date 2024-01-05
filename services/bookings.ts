@@ -19,7 +19,7 @@ export const postBooking = async(bookingData: BookingModel): Promise<Document<Bo
 
 }
 export const patchBooking = async(id: string, bookingData: any): Promise<Document<BookingModel> | null> => {
-    return await Booking.findByIdAndUpdate(id, bookingData, { new: true, runValidators: true })
+    return await Booking.findByIdAndUpdate(id, bookingData)
 }
 
 export const deleteBooking = async(id:string): Promise<Document<BookingModel> | null>  => {
