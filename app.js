@@ -1,0 +1,26 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.app = void 0;
+const express_1 = __importDefault(require("express"));
+const user_1 = require("./controllers/user");
+const auth_1 = require("./middleware/auth");
+const login_1 = require("./controllers/login");
+const bookings_1 = require("./controllers/bookings");
+const rooms_1 = require("./controllers/rooms");
+const contact_1 = require("./controllers/contact");
+const connectToDb_1 = require("./connectToDb");
+require('dotenv').config();
+exports.app = (0, express_1.default)();
+exports.app.use(express_1.default.json());
+exports.app.use('/login', login_1.loginRouter);
+exports.app.use(auth_1.authMiddleware);
+(0, connectToDb_1.connectToDb)();
+exports.app.use('/users', user_1.usersRouter);
+exports.app.use('/bookings', bookings_1.bookingRouter);
+exports.app.use('/rooms', rooms_1.roomRouter);
+exports.app.use('/contact', contact_1.contactRouter);
+exports.app.use('/users', user_1.usersRouter);
+exports.default = exports.app;

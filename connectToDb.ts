@@ -1,10 +1,11 @@
 import mongoose from "mongoose"
 
-const db_user = process.env.MONGO_USER;
-const db_password = process.env.MONGO__PASS
+const mongo_url = process.env.MONGO_URL;
+
+
 export async function connectToDb() {
     try {
-        await mongoose.connect(`mongodb+srv://rickH:MCY1eTNkBk6ovxwd@miranda.ngiybra.mongodb.net/miranda`, {
+        await mongoose.connect(`${mongo_url}`, {
         });
     } catch (error) {
       console.error(error);
