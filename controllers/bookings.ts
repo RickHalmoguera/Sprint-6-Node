@@ -38,10 +38,6 @@ bookingRouter.patch("/:id", async (req: Request, res: Response) => {
 
 bookingRouter.delete("/:id", async (req: Request, res: Response) => {
     const id = req.params.id;
-    const data = await deleteBooking(id)
-    if (data) {
-        res.json( [{success: "booking deleted successfully"}]);
-      } else {
-        res.status(404).json({});
-    }
+    await deleteBooking(id)
+    
 });

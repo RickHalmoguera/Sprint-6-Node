@@ -38,10 +38,6 @@ roomRouter.patch("/:id", async (req: Request, res: Response) => {
 
 roomRouter.delete("/:id", async (req: Request, res: Response) => {
     const id = req.params.id;
-    const data = await deleteRoom(id)
-    if (data) {
-        res.json( [{success: "room deleted successfully"}]);
-      } else {
-        res.status(404).json({"message": "Room not found"});
-    }
+     await deleteRoom(id)
+ 
 });
