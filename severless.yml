@@ -1,4 +1,6 @@
-service: sprint-6-node
+service: sprint-6-
+plugins:
+  - serverless-dotenv-plugin
 frameworkVersion: "3"
 package:
   patterns:

@@ -74,7 +74,7 @@
     "AppLogGroup": {
       "Type": "AWS::Logs::LogGroup",
       "Properties": {
-        "LogGroupName": "/aws/lambda/sprint-6-node-dev-app"
+        "LogGroupName": "/aws/lambda/sprint-6--dev-app"
       }
     },
     "IamRoleLambdaExecution": {
@@ -102,7 +102,7 @@
               "Fn::Join": [
                 "-",
                 [
-                  "sprint-6-node",
+                  "sprint-6-",
                   "dev",
                   "lambda"
                 ]
@@ -120,7 +120,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/sprint-6-node-dev*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/sprint-6--dev*:*"
                     }
                   ]
                 },
@@ -131,7 +131,7 @@
                   ],
                   "Resource": [
                     {
-                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/sprint-6-node-dev*:*:*"
+                      "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/sprint-6--dev*:*:*"
                     }
                   ]
                 }
@@ -144,7 +144,7 @@
           "Fn::Join": [
             "-",
             [
-              "sprint-6-node",
+              "sprint-6-",
               "dev",
               {
                 "Ref": "AWS::Region"
@@ -162,13 +162,22 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/sprint-6-node/dev/1704440310255-2024-01-05T07:38:30.255Z/sprint-6-node.zip"
+          "S3Key": "serverless/sprint-6-/dev/1704442892236-2024-01-05T08:21:32.236Z/sprint-6-.zip"
         },
         "Handler": "dist/lambda.handler",
         "Runtime": "nodejs18.x",
-        "FunctionName": "sprint-6-node-dev-app",
+        "FunctionName": "sprint-6--dev-app",
         "MemorySize": 1024,
         "Timeout": 6,
+        "Environment": {
+          "Variables": {
+            "JWT_SECRET": "eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTcwMzE1NjI2NywiaWF0IjoxNzAzMTU2MjY3fQ.CW_Ox1uyZ8a5UF83rAUMcDtQSowBhpEAQWGFKUqRHag",
+            "MONGO_USER": "rickH",
+            "MONGO__PASS": "MCY1eTNkBk6ovxwd",
+            "MONGO_URL": "mongodb+srv://rickH:MCY1eTNkBk6ovxwd@miranda.ngiybra.mongodb.net/miranda",
+            "SECRET": "40GY0AP6zJSERMhTrkrjQxbb1dWK0mm2y8lXBkeu"
+          }
+        },
         "Role": {
           "Fn::GetAtt": [
             "IamRoleLambdaExecution",
@@ -180,20 +189,20 @@
         "AppLogGroup"
       ]
     },
-    "AppLambdaVersiongMWC8slFuLE2IsC6woHjuRLvQJyp4wuotl0NawT1UE": {
+    "AppLambdaVersionXdOK4gadZSM7b2kygkXlfnVeaCGIzAlc3zhXLnG8jlo": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "AppLambdaFunction"
         },
-        "CodeSha256": "GG5Lb9vpk9bu2zOPLEAYjcLvL0CQ8HFGEfswvnL7TwA="
+        "CodeSha256": "u7YTgfKBEM7RMzVedoXCMlgmOYBFvaNSRLoR9z/1YOE="
       }
     },
     "ApiGatewayRestApi": {
       "Type": "AWS::ApiGateway::RestApi",
       "Properties": {
-        "Name": "dev-sprint-6-node",
+        "Name": "dev-sprint-6-",
         "EndpointConfiguration": {
           "Types": [
             "EDGE"
@@ -405,7 +414,7 @@
         "AppLambdaPermissionApiGateway"
       ]
     },
-    "ApiGatewayDeployment1704440303218": {
+    "ApiGatewayDeployment1704442883213": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -464,16 +473,16 @@
         "Ref": "ServerlessDeploymentBucket"
       },
       "Export": {
-        "Name": "sls-sprint-6-node-dev-ServerlessDeploymentBucketName"
+        "Name": "sls-sprint-6--dev-ServerlessDeploymentBucketName"
       }
     },
     "AppLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "AppLambdaVersiongMWC8slFuLE2IsC6woHjuRLvQJyp4wuotl0NawT1UE"
+        "Ref": "AppLambdaVersionXdOK4gadZSM7b2kygkXlfnVeaCGIzAlc3zhXLnG8jlo"
       },
       "Export": {
-        "Name": "sls-sprint-6-node-dev-AppLambdaFunctionQualifiedArn"
+        "Name": "sls-sprint-6--dev-AppLambdaFunctionQualifiedArn"
       }
     },
     "ServiceEndpoint": {
@@ -499,7 +508,7 @@
         ]
       },
       "Export": {
-        "Name": "sls-sprint-6-node-dev-ServiceEndpoint"
+        "Name": "sls-sprint-6--dev-ServiceEndpoint"
       }
     }
   }
